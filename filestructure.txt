@@ -8,6 +8,14 @@
 |-- postcss.config.js
 |-- src
     |-- App.jsx
+    |-- components
+        |-- DropZone.jsx
+        |-- Footer.jsx
+        |-- Header.jsx
+        |-- IntroCard.jsx
+        |-- ResultsSection.jsx
+        |-- ReviewButton.jsx
+        |-- StatusHints.jsx
     |-- index.css
     |-- main.jsx
 |-- tailwind.config.js
