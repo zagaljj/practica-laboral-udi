@@ -14,7 +14,7 @@ export default function Header() {
               Revisión de Práctica Laboral
             </h1>
             <p className="text-blue-200 text-sm">
-              Universidad para el Desarrollo y la Innovación — UDI &nbsp;|&nbsp; Gestión I-2026
+              Practicas Laborales &nbsp;|&nbsp; Gestión I-2026
             </p>
           </div>
         </div>
