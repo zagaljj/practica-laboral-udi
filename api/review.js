@@ -17,7 +17,10 @@ Revisa que contenga:
 - Nombre completo del estudiante (no debe estar vacío)
 - Carrera correcta (solo acepta las dos carreras mencionadas,
   sin variaciones ortográficas)
-- Gestión académica: debe decir "I-2026"
+- Gestión académica: debe decir exactamente "I-2026" (letra I mayúscula, no el número 1).
+  Si aparece como "1-2026", "enero-2026", "ene-26", "01/2026", "45000" u otro formato de fecha o número,
+  es un error causado por Excel que convierte el texto automáticamente — marcar como ❌ e indicar
+  que debe escribirse "I-2026" como texto plano en la celda (no como fecha).
 - C.I. del estudiante (no debe estar vacío)
 - Dirección particular del estudiante
 - Teléfono y correo electrónico del estudiante
@@ -30,7 +33,11 @@ Revisa que contenga:
 - El cargo del supervisor debe ser gerencial, de dirección, propietario o dueño,
   o responsable del área relacionada a la carrera del estudiante. No se aceptan
   cargos operativos genéricos como "empleado", "asistente", "secretaria", etc.
-- Fecha de inicio y fecha de conclusión de la práctica
+- Fecha de inicio y fecha de conclusión de la práctica:
+  * Ambas deben ser posteriores al 9 de febrero de 2026 (09/02/2026). Si alguna es anterior, marcar ❌.
+  * Si Excel muestra la fecha como número serial (ej: "45692") o en formato ambiguo, intentar
+    interpretarla igualmente y validarla contra esa fecha mínima.
+  * Si la fecha no puede determinarse, marcar como ❌ e indicar que el campo parece estar vacío o mal formateado.
 - Días y horarios de trabajo
 - Al menos 3 funciones principales a realizar
 - Firma del docente guía, firma del estudiante y firma del supervisor
@@ -43,7 +50,9 @@ Revisa que contenga:
 - Nombre completo del estudiante pasante (no debe ser el placeholder
   "Nombre del Estudiante")
 - Carrera correcta del estudiante (misma validación que en la ficha)
-- Fecha de inicio en la Cláusula Cuarta (no debe quedar como "colocar fecha")
+- Fecha de inicio en la Cláusula Cuarta (no debe quedar como "colocar fecha"):
+  * Debe ser una fecha real y posterior al 9 de febrero de 2026 (09/02/2026). Si es anterior, marcar ❌.
+  * Si sigue siendo el placeholder o no es una fecha válida, marcar como ❌.
 - Nombre del representante legal con su cargo (no debe decir
   "Nombre de Representante Legal" o "CARGO" sin rellenar)
 - El cargo del representante legal debe ser gerencial, directivo,
@@ -55,7 +64,7 @@ Revisa que contenga:
 CONSISTENCIA ENTRE DOCUMENTOS:
 - El nombre del estudiante debe ser idéntico en ambos documentos
 - El nombre del Centro de Prácticas debe coincidir en ambos documentos
-- La fecha de inicio debe coincidir en ambos documentos
+- La fecha de inicio debe coincidir en ambos documentos y ser posterior al 9 de febrero de 2026
 - La carrera debe coincidir en ambos documentos
 
 FORMATO DE RESPUESTA:
@@ -77,7 +86,12 @@ errores críticos deben corregirse primero. Ser específico y amable.]
 Sé amable y específico. Si un campo está vacío dilo claramente.
 Si un cargo no es apropiado, explica qué tipo de cargo se necesita.
 Recuerda que el estudiante aún no ha firmado los documentos, por lo que
-las observaciones sobre firmas y sellos son para el documento físico final.`
+las observaciones sobre firmas y sellos son para el documento físico final.
+
+REGLA DE EMOJIS (obligatoria):
+- Usa ✅ ÚNICAMENTE cuando el campo esté correctamente completado.
+- Usa ❌ ÚNICAMENTE cuando el campo tenga un error, esté vacío o incorrecto.
+- NUNCA escribas ❌ junto a la palabra "Correcto" ni ✅ junto a una descripción de error.`
 
 export default async function handler(req, res) {
   // CORS headers
