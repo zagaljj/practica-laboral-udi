@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom prose styles for react-markdown */
+.prose h2 {
+  @apply text-lg font-bold text-gray-800 mt-6 mb-2;
+}
+.prose h3 {
+  @apply text-base font-semibold text-gray-700 mt-4 mb-1;
+}
+.prose ul {
+  @apply list-none pl-0 space-y-1;
+}
+.prose li {
+  @apply text-sm text-gray-700 leading-relaxed;
+}
+.prose p {
+  @apply text-sm text-gray-700 mb-2;
+}
+.prose strong {
+  @apply font-semibold;
+}

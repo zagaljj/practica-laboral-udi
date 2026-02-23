@@ -1,0 +1,15 @@
+|-- .env
+|-- .gitignore
+|-- api
+    |-- review.js
+|-- index.html
+|-- package-lock.json
+|-- package.json
+|-- postcss.config.js
+|-- src
+    |-- App.jsx
+    |-- index.css
+    |-- main.jsx
+|-- tailwind.config.js
+|-- vercel.json
+|-- vite.config.js
