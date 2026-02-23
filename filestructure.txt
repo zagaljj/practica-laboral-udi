@@ -1,5 +1,9 @@
 |-- .env
+|-- .env.local
 |-- .gitignore
+|-- .vercel
+    |-- project.json
+    |-- README.txt
 |-- api
     |-- review.js
 |-- index.html
